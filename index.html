@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <button class="header_button"> <img src="./assets/arrow_close.svg" alt="header_button_img"> </button>
+        <img src="./assets/logo_blanco.png" class="header_img">
+        <div></div>
+    </header>
+
+    <section class="saludo">
+        <div class="saludo__div"><h3>Hola {data}, Nos encanta que estes aqui</h3></div>
+        <div class="saludo__div2"><p>Restaurante:<strong>Toks MAQ</strong> / Mesa:<strong>10</strong></p></div>
+    </section>
+
+    <section class="formulario">
+        <div class="formulario__pregunta"><p>Cuantas personas ordenaran desde tu aplicacion?</p></div>
+        <form action="" method="post" class="formulario__form">
+            <div class="formulario__form_div">
+                <p>1 Persona</p>
+                <input type="radio" name="num_person" id="one" value="1">
+            </div>
+            <div class="formulario__form_div">
+                <p>2 Personas</p>
+                <input type="radio" name="num_person" id="two" value="2">
+            </div>
+            <div class="formulario__form_div">
+                <p>3 Personas</p>
+                <input type="radio" name="num_person" id="three" value="3">
+            </div>
+            <div class="formulario__form_div">
+                <p>4 Personas</p>
+                <input type="radio" name="num_person" id="four" value="4">
+            </div>
+            <div class="formulario__form_div">
+                <p>5 o mas Personas</p>
+                <input type="radio" name="num_person" id="five" value="5">
+            </div>
+        </form>
+    </section>
+    
+    <div class="div">
+        <button disabled="disabled" class="div__btn"><a href="./page2.html" class="div__btn__a">Ir al menu</a></button>
+    </div>
+
+
+    <script src="javascript/main.js"></script>
+</body>
+</html>

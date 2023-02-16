@@ -1,0 +1,253 @@
+/* Aquí definimos las Custom properties */
+:root {
+  --negro: #393939;
+  --blanco: #EAF1EA;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+}
+/* Opcional */
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+/* h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+} */
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+/*############################################################################################################# */
+.header{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_img{
+  width: 40%;
+}
+.header_button{
+  height: 50%;
+}
+.saludo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saludo__div{
+  margin-top: 5%;
+  width: 90%;
+}
+.saludo__div2{
+  margin-top: 2%;
+  width: 90%;
+  font-size: 85%;
+}
+.formulario{
+  margin-top: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulario__pregunta{
+  width: 90%;
+}
+.formulario__form{
+  margin-top: 5%;
+  width: 90%;
+}
+.formulario__form_div{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div{
+  margin-top: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.div__btn{
+  background: var(--negro);
+  width: 50%;
+  height: 5vh;
+  border-radius: 10px;
+}
+.div__btn__a{
+  color: var(--blanco);
+}
+
+
+/*###################################################################### */
+.buscardor{
+  display: flex;
+  justify-content: center;
+}
+.buscardor__input{
+  width: 80%;
+  height: 5vh;
+  margin-top: 13%;
+}
+input[type=search]{
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  background:  rgba(177, 177, 177, 0.329);
+  background-image: url('/assets/search.svg');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+
+}
+
+.section{
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+}
+.section__div{
+  width: 80%;
+}
+.section__div2{
+  background: forestgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div2_item{
+  background: gold;
+  width: 6rem;
+  height: 6rem;
+}
