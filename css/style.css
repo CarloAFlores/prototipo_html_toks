@@ -152,12 +152,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
 }
 .header_img{
-  width: 40%;
+  width: 10%;
+}
+.header_logo{
+  width: 25%;
 }
 .header_button{
   height: 50%;
+}
+.header__div{
+  display: flex;
 }
 .saludo{
   display: flex;
@@ -216,7 +224,7 @@ body {
   justify-content: center;
 }
 .buscardor__input{
-  width: 80%;
+  width: 90%;
   height: 5vh;
   margin-top: 13%;
 }
@@ -238,7 +246,7 @@ input[type=search]{
   justify-content: center;
 }
 .section__div{
-  width: 80%;
+  width: 90%;
 }
 .section__div2{
   background: forestgreen;
@@ -250,4 +258,188 @@ input[type=search]{
   background: gold;
   width: 6rem;
   height: 6rem;
+}
+
+.horario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+.horario__div{
+  width: 90%;
+}
+.horario__opciones{
+  margin-top: 5%;
+  width: 90%;
+  display: flex;
+}
+.horario__opciones--click{
+  width: 33.3%;
+}
+.horario__opciones--click:focus{
+  transition: all 0.2s ease-out;
+  border-bottom: 5px solid orange;
+  color: orange;
+}
+
+.horario__opciones__div{
+
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,auto);
+  gap: .5rem;
+}
+.horario__opciones__div__item{
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #666;
+}
+
+.horario__opciones__div__item:nth-child(1){
+  background: green;
+  grid-column: span 3;
+}
+.horario__opciones__div__item:nth-child(2){
+  background: green;
+  grid-column: span 3;
+}
+.horario__opciones__div__item:nth-child(3){
+  background: green;
+  grid-column: span 2;
+}
+.horario__opciones__div__item:nth-child(6){
+  background: green;
+  grid-column: span 2;
+}
+.horario__opciones__div__item:nth-child(7){
+  background: green;
+  grid-column: span 2;
+}
+.horario__opciones__div__item:nth-child(10){
+  background: green;
+  grid-column: span 2;
+}
+.horario__opciones__div__item:nth-child(11){
+  background: green;
+  grid-column: span 3;
+}
+/*####################################################################### */
+.platillo{
+  position: relative;
+  background: red;
+  position: sticky;
+  top: 0;
+}
+.platillo::before{
+  background: rgba(0,0,0,.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+}
+.platillo__btn{
+  position: absolute;
+  left: 6%;
+  top: 45%;
+  background: transparent;
+}
+.platillo__div{
+  position: absolute;
+  left: 15%;
+  top: 44%;
+  color: var(--blanco);
+  font-size: 1.8rem;
+  
+}
+.promociones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promociones__div{
+  margin-top: 6%;
+  width: 90%;
+  display: flex;
+}
+.promociones__div__btn--click{
+  margin-left: 1rem;
+}
+.promociones__div__btn--click:focus{
+  transition: all 0.2s ease-out;
+  border-bottom: 1.5px solid orange;
+  color: orange;
+}
+.promociones__div__recomendacion{
+  margin-top: 3%;
+  background: rebeccapurple;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+.promociones__div__recomendacion__div{
+  background: gold;
+  width: 6rem;
+  height: 6rem;
+}
+
+.informacion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.informacion__div{
+  width: 90%;
+}
+.informacion__div__h2{
+  margin-top: 5%;
+}
+.informacion__div__horario{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  border-radius: 8px;
+  background: rgba(248, 186, 72, 0.363);
+  border: 1px solid rgb(255, 81, 0);
+}
+.informacion__div__horario__span{
+  font-size: 85%;
+}
+.plato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plato__div{
+  margin-top: 10%;
+  width: 95%;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.plato__div__img{
+  width: 35%;
+}
+.plato__div__informacion{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.plato__div__informacion__div{
+  margin-top: 7%;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.plato__div__informacion__div__btn{
+  width: 35%;
+  border-radius: 5px;
+  background: orange;
+  color: var(--blanco );
+}
+.plato__div__informacion__div2{
+  margin-top: 5%;
+  width: 95%;
 }
