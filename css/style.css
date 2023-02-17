@@ -1,10 +1,27 @@
+@font-face {
+  font-family: Avenir-Black;
+  src: url(/css/AvenirLTStd-Black.otf);
+}
+@font-face {
+  font-family: Avernir-Book;
+  src: url(/css/AvenirLTStd-Book.otf);
+}
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url(/css/AvenirLTStd-Roman.otf);
+}
+
+
 /* Aquí definimos las Custom properties */
 :root {
-  --negro: #393939;
-  --blanco: #EAF1EA;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --neo-gris: #474747;
   /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --tipo-principal: Avenir-Black;;
+  --tipo-secundaria: Avernir-Book;
+  --tipo-terciario: Avenir-Roman
 }
 
 /* Las adaptamos al modo oscuro */
@@ -148,7 +165,7 @@ body {
 }
 /*############################################################################################################# */
 .header{
-    background: black;
+    background: #000000;;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,6 +188,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--tipo-terciario);
 }
 .saludo__div{
   margin-top: 5%;
@@ -180,12 +198,14 @@ body {
   margin-top: 2%;
   width: 90%;
   font-size: 85%;
+  font-family: var(--tipo-secundaria);
 }
 .formulario{
   margin-top: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--tipo-secundaria);
 }
 .formulario__pregunta{
   width: 90%;
@@ -247,6 +267,8 @@ input[type=search]{
 }
 .section__div{
   width: 90%;
+  font-family: var(--tipo-secundaria);
+  color: var(--neo-gris);
 }
 .section__div2{
   background: forestgreen;
@@ -266,6 +288,10 @@ input[type=search]{
   align-items: center;
   margin-top: 15%;
 }
+.div__p{
+  font-family: var(--tipo-secundaria);
+  color: var(--neo-gris);
+}
 .horario__div{
   width: 90%;
 }
@@ -273,6 +299,8 @@ input[type=search]{
   margin-top: 5%;
   width: 90%;
   display: flex;
+  font-family: var(--tipo-secundaria);
+  color: var(--neo-gris);
 }
 .horario__opciones--click{
   width: 33.3%;
@@ -361,6 +389,8 @@ input[type=search]{
   margin-top: 6%;
   width: 90%;
   display: flex;
+  font-family: var(--tipo-secundaria);
+  color: var(--neo-gris);
 }
 .promociones__div__btn--click{
   margin-left: 1rem;
@@ -393,6 +423,7 @@ input[type=search]{
 }
 .informacion__div__h2{
   margin-top: 5%;
+  font-family: var(--tipo-principal);
 }
 .informacion__div__horario{
   margin-top: 5%;
@@ -403,9 +434,11 @@ input[type=search]{
   border-radius: 8px;
   background: rgba(248, 186, 72, 0.363);
   border: 1px solid rgb(255, 81, 0);
+  font-family: var(--tipo-secundaria);
 }
 .informacion__div__horario__span{
   font-size: 85%;
+  font-family: var(--tipo-secundaria);
 }
 .plato{
   display: flex;
@@ -432,14 +465,132 @@ input[type=search]{
   width: 95%;
   display: flex;
   justify-content: space-between;
+  font-family: var(--tipo-terciario);
 }
 .plato__div__informacion__div__btn{
   width: 35%;
   border-radius: 5px;
-  background: orange;
+  background: #F58220;
   color: var(--blanco );
 }
 .plato__div__informacion__div2{
   margin-top: 5%;
   width: 95%;
+  font-family: var(--tipo-secundaria);
+}
+/*####################################################################### */
+.header2{
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  height: 10vh;
+}
+.header2__h3{
+  color: var(--blanco);
+}
+.header2_img{
+width: 10%;
+}
+.header2_logo{
+width: 25%;
+}
+.header2_button{
+height: 50%;
+}
+.header2__div{
+display: flex;
+}
+.comida__p{
+  background: orangered;
+  color: var(--blanco);
+  width: 30%;
+  height: 6%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 33%;
+  left: 60%;
+}
+.informe{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+.informe__div{
+  width: 90%;
+}
+.informe__div__p{
+  margin-top: 5%;
+  font-family: var(--tipo-secundaria);
+}
+.informe__div__informacion{
+  display: flex;
+  margin-top: 3%;
+  font-size: 70%;
+  font-style: italic;
+  color: gray;
+  font-family: var(--tipo-terciario);
+}
+.informe__div__informacion__img{
+  width: 8%;
+  padding: 4px 0px 0px 5px;
+}
+.iniciar{
+  margin-top:12%;
+}
+.iniciar__div{
+  display: flex;
+  margin-top: 5%;
+  
+}
+.iniciar__div__img{
+  width: 8%;
+}
+.iniciar__div__p{
+  font-family: var(--tipo-secundaria);
+}
+.informe__btn{
+  margin-top: 50%;
+  background: var(--negro);
+  width: 80%;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--blanco);
+}
+/*################################################# */
+.proceso{
+  background: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.proceso__div{
+  display: flex;
+  justify-content: space-between;
+  background: greenyellow;
+  width: 90%;
+}
+.proceso__div__p{
+  color: orange;
+}
+.proceso__div2{
+  background: green;
+  width: 90%;
+}
+.proceso__producto{
+  background: brown;
+  width: 90%;
+}
+.proceso_producto__div{
+  background: white;
 }
